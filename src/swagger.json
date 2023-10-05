@@ -1,0 +1,556 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "API Chat",
+      "contact": "brunoleoncalderon18@gmail.com",
+      "version": "1.0"
+    },
+    "paths": {
+      "/api/v1/users": {
+        "post": {
+          "tags": [
+            "users"
+          ],
+          "summary": "post register",
+          "operationId": "postregister",
+          "parameters": [],
+          "requestBody": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/postregisterrequest"
+                    },
+                    {
+                      "example": {
+                        "firstname": "bruno",
+                        "lastname": "leon",
+                        "email": "brunoleoncalderon18@gmail.com",
+                        "password": "Tatiana$28"
+                      }
+                    }
+                  ]
+                },
+                "example": {
+                  "firstname": "bruno",
+                  "lastname": "leon",
+                  "email": "brunoleoncalderon18@gmail.com",
+                  "password": "Tatiana$28"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          },
+          "deprecated": false
+        },
+        "get": {
+          "tags": [
+            "users"
+          ],
+          "summary": "get all Users",
+          "operationId": "getallUsers",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          },
+          "deprecated": false,
+          "security": [
+            {
+              "bearer": []
+            }
+          ]
+        }
+      },
+      "/api/v1/users/login": {
+        "post": {
+          "tags": [
+            "users"
+          ],
+          "summary": "post userlogin",
+          "operationId": "postuserlogin",
+          "parameters": [],
+          "requestBody": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/postuserloginrequest"
+                    },
+                    {
+                      "example": {
+                        "email": "jorgeluna@gmail.com",
+                        "password": "Tatiana$28"
+                      }
+                    }
+                  ]
+                },
+                "example": {
+                  "email": "jorgeluna@gmail.com",
+                  "password": "Tatiana$28"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          },
+          "deprecated": false
+        }
+      },
+      "/api/v1/conversations": {
+        "post": {
+          "tags": [
+            "conversations"
+          ],
+          "summary": "create Conversations",
+          "operationId": "createConversations",
+          "parameters": [],
+          "requestBody": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/createConversationsRequest"
+                    },
+                    {
+                      "example": {
+                        "userId": 4,
+                        "participantId": 5
+                      }
+                    }
+                  ]
+                },
+                "example": {
+                  "userId": 4,
+                  "participantId": 5
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          },
+          "deprecated": false,
+          "security": [
+            {
+              "bearer": []
+            }
+          ]
+        }
+      },
+      "/api/v1/conversations/group": {
+        "post": {
+          "tags": [
+            "conversations"
+          ],
+          "summary": "create group Conversations",
+          "operationId": "creategroupConversations",
+          "parameters": [],
+          "requestBody": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/creategroupConversationsRequest"
+                    },
+                    {
+                      "example": {
+                        "userId": 6,
+                        "participantsId": [
+                          4,
+                          2
+                        ],
+                        "title": "fullstack"
+                      }
+                    }
+                  ]
+                },
+                "example": {
+                  "userId": 6,
+                  "participantsId": [
+                    4,
+                    2
+                  ],
+                  "title": "fullstack"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          },
+          "deprecated": false,
+          "security": [
+            {
+              "bearer": []
+            }
+          ]
+        }
+      },
+      "/api/v1/conversations/{id}": {
+        "get": {
+          "tags": [
+            "conversations"
+          ],
+          "summary": "get All conversation By user",
+          "operationId": "getAllconversationByuser",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "",
+              "required": true,
+              "style": "simple",
+              "schema": {
+                "type": "integer",
+                "format": "int32",
+                "example": 4
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          },
+          "deprecated": false,
+          "security": [
+            {
+              "bearer": []
+            }
+          ]
+        }
+      },
+      "/api/v1/messages/conversation/{id}": {
+        "post": {
+          "tags": [
+            "messages"
+          ],
+          "summary": "Post messages",
+          "operationId": "Postmessages",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "",
+              "required": true,
+              "style": "simple",
+              "schema": {
+                "type": "integer",
+                "format": "int32",
+                "example": 5
+              }
+            }
+          ],
+          "requestBody": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/PostmessagesRequest"
+                    },
+                    {
+                      "example": {
+                        "content": "que bueno ",
+                        "senderId": 4
+                      }
+                    }
+                  ]
+                },
+                "example": {
+                  "content": "que bueno ",
+                  "senderId": 4
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          },
+          "deprecated": false,
+          "security": [
+            {
+              "bearer": []
+            }
+          ]
+        },
+        "get": {
+          "tags": [
+            "messages"
+          ],
+          "summary": "get Conversation Messages",
+          "operationId": "getConversationMessages",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "",
+              "required": true,
+              "style": "simple",
+              "schema": {
+                "type": "integer",
+                "format": "int32",
+                "example": 5
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          },
+          "deprecated": false,
+          "security": [
+            {
+              "bearer": []
+            }
+          ]
+        }
+      },
+      "/api/v1/users/{id}": {
+        "put": {
+          "tags": [
+            "Misc"
+          ],
+          "summary": "upload-put",
+          "operationId": "upload-put",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "",
+              "required": true,
+              "style": "simple",
+              "schema": {
+                "type": "integer",
+                "format": "int32",
+                "example": 5
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "multipart/form-data": {
+                "encoding": {},
+                "schema": {
+                  "required": [
+                    "avatar"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "avatar": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            },
+            "required": false
+          },
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          },
+          "deprecated": false,
+          "security": [
+            {
+              "bearer": []
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "postregisterrequest": {
+          "title": "postregisterrequest",
+          "required": [
+            "firstname",
+            "lastname",
+            "email",
+            "password"
+          ],
+          "type": "object",
+          "properties": {
+            "firstname": {
+              "type": "string"
+            },
+            "lastname": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            }
+          },
+          "example": {
+            "firstname": "bruno",
+            "lastname": "leon",
+            "email": "brunoleoncalderon18@gmail.com",
+            "password": "Tatiana$28"
+          }
+        },
+        "postuserloginrequest": {
+          "title": "postuserloginrequest",
+          "required": [
+            "email",
+            "password"
+          ],
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            }
+          },
+          "example": {
+            "email": "jorgeluna@gmail.com",
+            "password": "Tatiana$28"
+          }
+        },
+        "createConversationsRequest": {
+          "title": "createConversationsRequest",
+          "required": [
+            "userId",
+            "participantId"
+          ],
+          "type": "object",
+          "properties": {
+            "userId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "participantId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "example": {
+            "userId": 4,
+            "participantId": 5
+          }
+        },
+        "creategroupConversationsRequest": {
+          "title": "creategroupConversationsRequest",
+          "required": [
+            "userId",
+            "participantsId",
+            "title"
+          ],
+          "type": "object",
+          "properties": {
+            "userId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "participantsId": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "description": ""
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "example": {
+            "userId": 6,
+            "participantsId": [
+              4,
+              2
+            ],
+            "title": "fullstack"
+          }
+        },
+        "PostmessagesRequest": {
+          "title": "PostmessagesRequest",
+          "required": [
+            "content",
+            "senderId"
+          ],
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "string"
+            },
+            "senderId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "example": {
+            "content": "que bueno ",
+            "senderId": 4
+          }
+        }
+      },
+      "securitySchemes": {
+        "bearer": {
+          "type": "http",
+          "scheme": "bearer"
+        }
+      }
+    },
+    "security": [],
+    "tags": [
+      {
+        "name": "users"
+      },
+      {
+        "name": "conversations"
+      },
+      {
+        "name": "messages"
+      },
+      {
+        "name": "Misc",
+        "description": ""
+      }
+    ]
+  }

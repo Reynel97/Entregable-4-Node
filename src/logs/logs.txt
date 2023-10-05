@@ -1,0 +1,162 @@
+====================ERROR  26/9/2023, 22:14:58=========================
+{"name":"SequelizeUniqueConstraintError","errors":[],"parent":{"length":223,"name":"error","severity":"ERROR","code":"23505","detail":"Ya existe la llave (email)=(brunoleoncalderon18@gmail.com).","schema":"public","table":"Users","constraint":"Users_email_key","file":"nbtinsert.c","line":"671","routine":"_bt_check_unique","sql":"INSERT INTO \"Users\" (\"id\",\"firstname\",\"lastname\",\"email\",\"password\",\"createdAt\",\"updatedAt\") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6) RETURNING \"id\",\"firstname\",\"lastname\",\"email\",\"avatar\",\"password\",\"description\",\"validEmail\",\"createdAt\",\"updatedAt\";","parameters":["bruno","leon","brunoleoncalderon18@gmail.com","$2b$10$arLqBUu8gpqoduUQpwholeehHW1iiDWZK1cEzwUPABQpzRjbg/fCK","2023-09-27 03:14:58.579 +00:00","2023-09-27 03:14:58.579 +00:00"]},"original":{"length":223,"name":"error","severity":"ERROR","code":"23505","detail":"Ya existe la llave (email)=(brunoleoncalderon18@gmail.com).","schema":"public","table":"Users","constraint":"Users_email_key","file":"nbtinsert.c","line":"671","routine":"_bt_check_unique","sql":"INSERT INTO \"Users\" (\"id\",\"firstname\",\"lastname\",\"email\",\"password\",\"createdAt\",\"updatedAt\") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6) RETURNING \"id\",\"firstname\",\"lastname\",\"email\",\"avatar\",\"password\",\"description\",\"validEmail\",\"createdAt\",\"updatedAt\";","parameters":["bruno","leon","brunoleoncalderon18@gmail.com","$2b$10$arLqBUu8gpqoduUQpwholeehHW1iiDWZK1cEzwUPABQpzRjbg/fCK","2023-09-27 03:14:58.579 +00:00","2023-09-27 03:14:58.579 +00:00"]},"fields":{},"sql":"INSERT INTO \"Users\" (\"id\",\"firstname\",\"lastname\",\"email\",\"password\",\"createdAt\",\"updatedAt\") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6) RETURNING \"id\",\"firstname\",\"lastname\",\"email\",\"avatar\",\"password\",\"description\",\"validEmail\",\"createdAt\",\"updatedAt\";"}
+
+====================ERROR  26/9/2023, 22:15:03=========================
+{"name":"SequelizeUniqueConstraintError","errors":[],"parent":{"length":223,"name":"error","severity":"ERROR","code":"23505","detail":"Ya existe la llave (email)=(brunoleoncalderon18@gmail.com).","schema":"public","table":"Users","constraint":"Users_email_key","file":"nbtinsert.c","line":"671","routine":"_bt_check_unique","sql":"INSERT INTO \"Users\" (\"id\",\"firstname\",\"lastname\",\"email\",\"password\",\"createdAt\",\"updatedAt\") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6) RETURNING \"id\",\"firstname\",\"lastname\",\"email\",\"avatar\",\"password\",\"description\",\"validEmail\",\"createdAt\",\"updatedAt\";","parameters":["bruno","leon","brunoleoncalderon18@gmail.com","$2b$10$ysEcioVY23hjz8OVYBhq5.OWy1Wd571mhJDne8pIbbqQIyyrnOnNC","2023-09-27 03:15:03.179 +00:00","2023-09-27 03:15:03.179 +00:00"]},"original":{"length":223,"name":"error","severity":"ERROR","code":"23505","detail":"Ya existe la llave (email)=(brunoleoncalderon18@gmail.com).","schema":"public","table":"Users","constraint":"Users_email_key","file":"nbtinsert.c","line":"671","routine":"_bt_check_unique","sql":"INSERT INTO \"Users\" (\"id\",\"firstname\",\"lastname\",\"email\",\"password\",\"createdAt\",\"updatedAt\") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6) RETURNING \"id\",\"firstname\",\"lastname\",\"email\",\"avatar\",\"password\",\"description\",\"validEmail\",\"createdAt\",\"updatedAt\";","parameters":["bruno","leon","brunoleoncalderon18@gmail.com","$2b$10$ysEcioVY23hjz8OVYBhq5.OWy1Wd571mhJDne8pIbbqQIyyrnOnNC","2023-09-27 03:15:03.179 +00:00","2023-09-27 03:15:03.179 +00:00"]},"fields":{},"sql":"INSERT INTO \"Users\" (\"id\",\"firstname\",\"lastname\",\"email\",\"password\",\"createdAt\",\"updatedAt\") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6) RETURNING \"id\",\"firstname\",\"lastname\",\"email\",\"avatar\",\"password\",\"description\",\"validEmail\",\"createdAt\",\"updatedAt\";"}
+
+====================ERROR  26/9/2023, 22:15:09=========================
+{"status":401,"error":"Email verification nedeed","message":"Look at your email messages for a verification email"}
+
+====================ERROR  27/9/2023, 21:09:03=========================
+{}
+
+====================ERROR  27/9/2023, 21:15:15=========================
+{}
+
+{}
+
+====================ERROR  27/9/2023, 21:17:47=========================
+====================ERROR  27/9/2023, 21:49:00=========================
+{}
+
+{}
+
+====================ERROR  27/9/2023, 21:49:57=========================
+====================ERROR  27/9/2023, 21:51:22=========================
+{"name":"SequelizeDatabaseError","parent":{"length":199,"name":"error","severity":"ERROR","code":"42703","hint":"Probablemente quiera hacer referencia a la columna «Participant.conversationId».","position":"38","file":"parse_relation.c","line":"3666","routine":"errorMissingColumn","sql":"SELECT \"senderId\", \"conversationId\", \"ConversationId\", \"UserId\" FROM \"Participants\" AS \"Participant\" WHERE \"Participant\".\"ConversationId\" = 4 AND \"Participant\".\"UserId\" IN (46);"},"original":{"length":199,"name":"error","severity":"ERROR","code":"42703","hint":"Probablemente quiera hacer referencia a la columna «Participant.conversationId».","position":"38","file":"parse_relation.c","line":"3666","routine":"errorMissingColumn","sql":"SELECT \"senderId\", \"conversationId\", \"ConversationId\", \"UserId\" FROM \"Participants\" AS \"Participant\" WHERE \"Participant\".\"ConversationId\" = 4 AND \"Participant\".\"UserId\" IN (46);"},"sql":"SELECT \"senderId\", \"conversationId\", \"ConversationId\", \"UserId\" FROM \"Participants\" AS \"Participant\" WHERE \"Participant\".\"ConversationId\" = 4 AND \"Participant\".\"UserId\" IN (46);","parameters":{}}
+
+====================ERROR  27/9/2023, 22:06:16=========================
+["La propiedad password de ser minimo 8 caracteres, una mayuscula y una minuscula"]
+
+{"status":401,"error":"Email verification nedeed","message":"Look at your email messages for a verification email"}
+
+====================ERROR  2/10/2023, 20:53:18=========================
+{"status":401,"error":"Email verification nedeed","message":"Look at your email messages for a verification email"}
+
+====================ERROR  2/10/2023, 20:53:26=========================
+{"status":400,"error":"password invalid","message":"password invalid"}
+
+====================ERROR  2/10/2023, 20:54:21=========================
+{"status":400,"error":"password invalid","message":"password invalid"}
+
+====================ERROR  2/10/2023, 20:54:36=========================
+====================ERROR  2/10/2023, 20:54:43=========================
+{"status":400,"error":"password invalid","message":"password invalid"}
+
+====================ERROR  2/10/2023, 20:56:39=========================
+{"status":401,"error":"Email verification nedeed","message":"Look at your email messages for a verification email"}
+
+====================ERROR  2/10/2023, 22:30:34=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-03T02:57:10.000Z"}
+
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-03T02:57:10.000Z"}
+
+====================ERROR  2/10/2023, 22:32:10=========================
+====================ERROR  3/10/2023, 19:37:05=========================
+{"name":"JsonWebTokenError","message":"jwt malformed"}
+
+====================ERROR  3/10/2023, 19:37:05=========================
+{"name":"JsonWebTokenError","message":"jwt malformed"}
+
+====================ERROR  3/10/2023, 19:37:05=========================
+{"name":"JsonWebTokenError","message":"jwt malformed"}
+
+====================ERROR  3/10/2023, 19:37:05=========================
+{"name":"JsonWebTokenError","message":"jwt malformed"}
+
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T01:37:05.000Z"}
+
+====================ERROR  3/10/2023, 20:58:01=========================
+====================ERROR  3/10/2023, 20:58:05=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T01:37:05.000Z"}
+
+====================ERROR  3/10/2023, 20:58:31=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T01:37:05.000Z"}
+
+====================ERROR  3/10/2023, 20:58:31=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T01:37:05.000Z"}
+
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T01:37:05.000Z"}
+
+====================ERROR  3/10/2023, 20:58:31=========================
+====================ERROR  3/10/2023, 20:58:31=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T01:37:05.000Z"}
+
+====================ERROR  3/10/2023, 21:27:58=========================
+{"errno":-4058,"code":"ENOENT","syscall":"open","path":"C:\\Users\\lachi\\Desktop\\chat-api\\public\\3\\10\\2023, 21:27:58 - 41278.jpg","storageErrors":[]}
+
+====================ERROR  3/10/2023, 21:32:29=========================
+{"errno":-4058,"code":"ENOENT","syscall":"open","path":"C:\\Users\\lachi\\Desktop\\chat-api\\public\\21:32:29 - 41278.jpg","storageErrors":[]}
+
+====================ERROR  3/10/2023, 21:41:09=========================
+{"name":"MulterError","message":"File too large","code":"LIMIT_FILE_SIZE","field":"avatar","storageErrors":[]}
+
+{"status":400,"error":"file not accepted","message":"Only images files are allowed","storageErrors":[]}
+
+====================ERROR  3/10/2023, 21:52:29=========================
+====================ERROR  3/10/2023, 21:55:12=========================
+{"status":400,"error":"file not accepted","message":"Only images files are allowed","storageErrors":[]}
+
+====================ERROR  3/10/2023, 21:58:54=========================
+{"status":400,"error":"file not accepted","message":"Only images files are allowed","storageErrors":[]}
+
+====================ERROR  3/10/2023, 22:54:12=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+====================ERROR  3/10/2023, 22:54:12=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+====================ERROR  3/10/2023, 22:54:12=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+====================ERROR  3/10/2023, 22:54:13=========================
+====================ERROR  3/10/2023, 22:54:13=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+====================ERROR  3/10/2023, 22:54:13=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+====================ERROR  3/10/2023, 22:54:20=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+====================ERROR  3/10/2023, 22:54:20=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+====================ERROR  3/10/2023, 22:54:20=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+====================ERROR  3/10/2023, 22:54:20=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+====================ERROR  3/10/2023, 22:54:21=========================
+====================ERROR  3/10/2023, 22:54:21=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+====================ERROR  3/10/2023, 22:54:50=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+====================ERROR  3/10/2023, 22:54:50=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+====================ERROR  3/10/2023, 22:54:50=========================
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+{"name":"TokenExpiredError","message":"jwt expired","expiredAt":"2023-10-04T02:58:31.000Z"}
+
+====================ERROR  3/10/2023, 22:54:50=========================
+====================ERROR  4/10/2023, 22:26:13=========================
+{"status":401,"messages":"no token provided"}
+
+====================ERROR  4/10/2023, 23:23:31=========================
+{}
+
+{}
+
+====================ERROR  4/10/2023, 23:29:08=========================
+====================ERROR  4/10/2023, 23:30:02=========================
+{}
+
