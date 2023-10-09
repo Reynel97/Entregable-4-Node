@@ -25,19 +25,19 @@
                     },
                     {
                       "example": {
-                        "firstname": "bruno",
-                        "lastname": "leon",
-                        "email": "brunoleoncalderon18@gmail.com",
-                        "password": "Tatiana$28"
+                        "firstname": "Reynaldo",
+                        "lastname": "Jose",
+                        "email": "reynaldojosedelacruzrojano@gmail.com",
+                        "password": "Diosesamor2019"
                       }
                     }
                   ]
                 },
                 "example": {
-                  "firstname": "bruno",
-                  "lastname": "leon",
-                  "email": "brunoleoncalderon18@gmail.com",
-                  "password": "Tatiana$28"
+                  "firstname": "Reynaldo",
+                  "lastname": "Jose",
+                  "email": "reynaldojosedelacruzrojano@gmail.com",
+                  "password": "Diosesamor2019"
                 }
               }
             },
@@ -426,10 +426,10 @@
             }
           },
           "example": {
-            "firstname": "bruno",
-            "lastname": "leon",
-            "email": "brunoleoncalderon18@gmail.com",
-            "password": "Tatiana$28"
+            "firstname": "Reynaldo",
+            "lastname": "Jose",
+            "email": "reynaldojosedelacruzrojano@gmail.com",
+            "password": "Diosesamor2019"
           }
         },
         "postuserloginrequest": {
